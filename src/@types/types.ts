@@ -8,3 +8,9 @@ export interface SidebarInfo {
 export interface SidebarProps {
   isOpen: boolean;
 }
+
+export interface SidebarContextType {
+  isOpen: boolean;
+  setisOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleSidebar: () => void;
+}
