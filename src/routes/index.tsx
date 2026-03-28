@@ -13,6 +13,7 @@ function AppRoutes() {
       <Routes>
         <Route element={<DashboardLayout />}>
           <Route path={routes.HOME} element={<Home />} />
+          <Route path={routes.DASHBOARD} element={<Home />} />
           <Route path={routes.FAVORITES} element={<Favorites />} />
           <Route path={routes.ORDER} element={<Order />} />
           <Route path={routes.PRODUCTS} element={<Product />} />

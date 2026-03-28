@@ -1,5 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import useSidebar from "../../../hooks/useSidebar";
+import SidebarSections from "./SidebarSections";
+import { sidebarElements } from "../../../data/sidebarData";
+import SidebarLogo from "./SidebarLogo";
 
 function Sidebar() {
   const { isOpen } = useSidebar();
@@ -9,12 +12,19 @@ function Sidebar() {
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ width: isOpen ? 300 : 0, opacity: 1, x: 0 }}
+          animate={{ width: isOpen ? 280 : 0, opacity: 1, x: 0 }}
           exit={{ x: -100 }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className="hidden bg-blue-400 md:block h-full border-red-400 "
+          className="hidden py-4  border-r gap-6 border-primary-muted md:flex flex-col h-screen "
         >
-          <h1>Sidebar</h1>
+          <SidebarLogo />
+          {sidebarElements.map((item) => (
+            <SidebarSections
+              key={item.title}
+              section={item.title}
+              items={item.items}
+            />
+          ))}
         </motion.div>
       )}
     </AnimatePresence>

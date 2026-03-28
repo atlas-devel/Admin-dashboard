@@ -6,7 +6,7 @@ import MobileSearch from "./Search/MobileSearch";
 function Navigation() {
   return (
     <header>
-      <nav className="flex p-4 dark:bg-backround relative">
+      <nav className="flex p-4 py-6 dark:bg-backround relative">
         {/* trigger sidebar  */}
         <div className="flex justify-between items-center gap-3 w-full ">
           <div className="flex items-center gap-10 grow">
