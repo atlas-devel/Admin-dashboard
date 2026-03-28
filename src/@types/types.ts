@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 export interface SidebarInfo {
   id: number;
   name: string;
@@ -5,12 +6,12 @@ export interface SidebarInfo {
   link: string;
 }
 
-export interface SidebarProps {
-  isOpen: boolean;
-}
-
 export interface SidebarContextType {
   isOpen: boolean;
   setisOpen: React.Dispatch<React.SetStateAction<boolean>>;
   toggleSidebar: () => void;
+}
+
+export interface SearchProps {
+  forMobile: boolean;
 }

@@ -3,9 +3,8 @@ import { SidebarContext } from "../context/SidebarContext";
 
 function useSidebar() {
   const context = useContext(SidebarContext);
-
   if (!context) {
-    throw new Error("   use sidebar must be used in sidebar provider");
+    throw new Error("sidebar does not exist at useSidebar hook");
   }
 
   return {
@@ -14,4 +13,5 @@ function useSidebar() {
     toggleSidebar: context.toggleSidebar,
   };
 }
+
 export default useSidebar;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import DashboardLayout from "../Layout/DashboardLayout";
+import DashboardLayout from "../components/layout/DashboardLayout";
 import { routes } from "./routes";
 import Home from "../pages/Home";
 import Favorites from "../pages/Favorites";
