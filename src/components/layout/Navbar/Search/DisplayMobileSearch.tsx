@@ -2,12 +2,7 @@ import type { RefObject } from "react";
 import Search from "./Search";
 import { AnimatePresence, motion } from "framer-motion";
 
-function DisplayMobileSearch({
-  mobileSearch,
-}: {
-  mobileSearch: boolean;
-  focusInput: RefObject<null | any>;
-}) {
+function DisplayMobileSearch({ mobileSearch }: { mobileSearch: boolean }) {
   return (
     <AnimatePresence mode="wait">
       <motion.div

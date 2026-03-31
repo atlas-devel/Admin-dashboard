@@ -1,10 +1,13 @@
 import { Search as SearchIcon } from "lucide-react";
 import type { SearchProps } from "../../../../@types/types";
+import useNavbar from "../../../../hooks/useNavbar";
 
 function Search({ forMobile }: SearchProps) {
+  const { focusInput } = useNavbar();
   return (
     <div
-      className={`${!forMobile && "max-md:hidden"} relative border border-primary-muted rounded-full dark:bg-primary-muted bg-white grow max-w-xl `}
+      ref={forMobile ? focusInput : null}
+      className={`${!forMobile && "max-md:hidden"}  relative border border-primary-muted rounded-full dark:bg-primary-muted bg-white grow max-w-xl hover:outline-secondary-color hover:outline-2 `}
     >
       <div className="absolute inset-y-0 text-ring flex items-center pl-3 ">
         <SearchIcon />

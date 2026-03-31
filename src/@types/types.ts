@@ -23,3 +23,17 @@ export interface SidebarSectionProps {
   section: string;
   items: SidebarInfo[];
 }
+
+export interface Language {
+  flag: string;
+  language: "Kinyarwanda" | "English" | "French";
+}
+
+export interface StatsCardProps {
+  title: string;
+  number: number;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  bgColor: string;
+  color: string;
+  rate: number;
+}

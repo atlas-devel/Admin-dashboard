@@ -232,8 +232,11 @@
 
 @layer utilities{
  .font-inter{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Windsong', sans-serif;
  }
+}
+*{
+  font-family:"Inter"
 }
 
 /*---break---  */
@@ -247,9 +250,12 @@
     @apply bg-background text-foreground;
 
   }
-  html {
-    @apply font-sans;
+  
 
-  }
+}
 
+.search-active {
+  background-color: black !important;
+  border-color: blue !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
 }
