@@ -234,6 +234,10 @@
  .font-inter{
   font-family: 'Windsong', sans-serif;
  }
+ .hide-scrollbar{
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+ }
 }
 *{
   font-family:"Inter"
@@ -254,8 +258,3 @@
 
 }
 
-.search-active {
-  background-color: black !important;
-  border-color: blue !important;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
-}

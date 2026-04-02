@@ -1,31 +1,29 @@
 import {
-  Heart,
-  Grid2x2,
-  Gauge,
-  MessageCircleMore,
-  Warehouse,
-  ChartCandlestick,
-  Calendar,
-  ListTodo,
-  User,
-  Banknote,
-  ChartNoAxesColumnDecreasing,
-  Users,
-  Table,
+  Gauge, // Dashboard
+  Users, // Users
+  Warehouse, // Properties
+  Banknote, // Payments
+  FileText, // Leases
+  ShieldAlert, // Blacklist
+  MoveRight, // Move Out Requests
+  CheckCircle, // Property Verification
+  ChartNoAxesColumnDecreasing, // Reports
+  ScrollText, // Admin Logs
+  Settings, // Settings
+  MessageCircleMore, // Support Tickets
 } from "lucide-react";
 
 export const icons = {
-  Heart,
-  Grid2x2,
+  FileText, // Leases
+  ShieldAlert, // Blacklist
+  MoveRight, // Move Out Requests
+  CheckCircle,
   Gauge,
   MessageCircleMore,
   Warehouse,
-  ChartCandlestick,
-  Calendar,
-  ListTodo,
-  User,
+  ScrollText, // Admin Logs
+  Settings, // Settings
   Banknote,
   ChartNoAxesColumnDecreasing,
   Users,
-  Table,
 };

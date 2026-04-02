@@ -1,46 +1,66 @@
 import { icons } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+
 const {
-  Heart,
-  Grid2x2,
+  FileText, // Leases
+  ShieldAlert, // Blacklist
+  MoveRight, // Move Out Requests
   Gauge,
   MessageCircleMore,
   Warehouse,
-  ChartCandlestick,
-  Calendar,
-  ListTodo,
-  User,
+  ScrollText, // Admin Logs
+  Settings, // Settings
   Banknote,
   ChartNoAxesColumnDecreasing,
   Users,
-  Table,
 } = icons;
-
-
-
 
 export const sidebarElements = [
   {
-    title: "",
+    title: "MAIN",
     items: [
-      { id: 1, name: "Dashboard", Icon: Gauge, link: "/dashboard" },
-      { id: 2, name: "Products", Icon: Warehouse, link: "/products" },
-      { id: 3, name: "Favorites", Icon: Heart, link: "/favorites" },
-      { id: 4, name: "Inbox", Icon: MessageCircleMore, link: "/inbox" },
-      { id: 5, name: "Order Lists", Icon: ListTodo, link: "/orders" },
-      { id: 6, name: "Product Stock", Icon: ChartCandlestick, link: "/stock" },
+      { id: 1, name: "Dashboard", Icon: Gauge, link: "/admin/dashboard" },
+      { id: 2, name: "Users", Icon: Users, link: "/admin/users" },
+      { id: 3, name: "Properties", Icon: Warehouse, link: "/admin/properties" },
+      { id: 4, name: "Payments", Icon: Banknote, link: "/admin/payments" },
+      { id: 5, name: "Leases", Icon: FileText, link: "/admin/leases" },
     ],
   },
   {
-    title: "Pages",
+    title: "MANAGEMENT",
     items: [
-      { id: 1, name: "Pricing", Icon: Banknote, link: "/pricing" },
-      { id: 2, name: "Calendar", Icon: Calendar, link: "/calendar" },
-      { id: 3, name: "To-Do", Icon: Users, link: "/todo" },
-      { id: 5, name: "Contact", Icon: User, link: "/contact" },
-      { id: 6, name: "Invoice", Icon: Table, link: "/Invoice" },
-      { id: 7, name: "UI Elements", Icon: Grid2x2, link: "/ui-elements" },
-      { id: 8, name: "Team", Icon: ChartNoAxesColumnDecreasing, link: "/team" },
-      { id: 9, name: "Table", Icon: Table, link: "/table" },
+      { id: 1, name: "Blacklist", Icon: ShieldAlert, link: "/admin/blacklist" },
+      {
+        id: 2,
+        name: "Move Out Requests",
+        Icon: MoveRight,
+        link: "/admin/move-out-requests",
+      },
+      {
+        id: 3,
+        name: "Property Verification",
+        Icon: CheckCircle,
+        link: "/admin/verify-properties",
+      },
+      {
+        id: 4,
+        name: "Reports",
+        Icon: ChartNoAxesColumnDecreasing,
+        link: "/admin/reports",
+      },
+    ],
+  },
+  {
+    title: "SYSTEM",
+    items: [
+      { id: 1, name: "Admin Logs", Icon: ScrollText, link: "/admin/logs" },
+      { id: 2, name: "Settings", Icon: Settings, link: "/admin/settings" },
+      {
+        id: 3,
+        name: "Support Tickets",
+        Icon: MessageCircleMore,
+        link: "/admin/support",
+      },
     ],
   },
 ];
