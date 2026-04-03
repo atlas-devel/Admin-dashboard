@@ -6,8 +6,8 @@ function SidebarSections({ section, items }: SidebarSectionProps) {
   return (
     <div className="ml-2 h-full  ">
       {section && (
-        <div className="border-t border-primary-muted py-4 ">
-          <h1 className=" block uppercase text-neutral-400 font-medium pl-2">
+        <div className="border-t border-gray-400 dark:border-gray-800 py-4 ">
+          <h1 className=" block uppercase text-neutral-400 text-md font-medium pl-4">
             {section}
           </h1>
         </div>

@@ -20,7 +20,7 @@ export interface SidebarItemsProps {
   name: string;
 }
 export interface SidebarSectionProps {
-  section: string;
+  section?: string;
   items: SidebarInfo[];
 }
 
@@ -36,4 +36,6 @@ export interface StatsCardProps {
   bgColor: string;
   color: string;
   rate: number;
+  isCurrency?: boolean;
+  formatCurrency?: boolean;
 }

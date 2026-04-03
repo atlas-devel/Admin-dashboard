@@ -12,10 +12,10 @@ function Sidebar() {
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ width: isOpen ? 240 : 0, opacity: 1, x: 0 }}
+          animate={{ width: isOpen ? 270 : 0, opacity: 1, x: 0 }}
           exit={{ x: -100 }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className="hidden py-6 overflow-auto hide-scrollbar border-r gap-6 border-primary-muted md:flex flex-col h-screen "
+          className="hidden bg-white dark:bg-black py-6 overflow-auto hide-scrollbar border-r gap-6 border-gray-100 dark:border-gray-800/90 shadow-sm md:flex flex-col h-screen "
         >
           <AppLogo variants="text-3xl  text-center font-bold " />
           {sidebarElements.map((item) => (

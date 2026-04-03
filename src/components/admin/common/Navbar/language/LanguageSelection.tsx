@@ -9,12 +9,12 @@ import { Button } from "../../ui/Button";
 import { ChevronDown } from "lucide-react";
 import { languagesToSwitchWithFlags } from "../../../../../data/navbarData";
 import type { Language } from "../../../../../@types/types";
-import RwandaFlag from "@/assets/images/flags/RwandaFlag.webp";
+import FranceFlag from "@/assets/images/flags/france.png";
 
 function LanguageSelection() {
   const [language, setLanguage] = useState<Language>({
-    language: "Kinyarwanda",
-    flag: RwandaFlag,
+    language: "French",
+    flag: FranceFlag,
   });
 
   const handleLanguage = (lan: Language) => setLanguage(lan);
@@ -29,7 +29,7 @@ function LanguageSelection() {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className="text-ring font-medium transition-transform duration-500 ease-in-out "
+            className="text-ring font-medium transition-transform border border-gray-800 duration-500 ease-in-out "
           >
             {language?.language}
             <ChevronDown />

@@ -12,7 +12,7 @@ import {
 
 function Chart() {
   return (
-    <div className=" bg-white mt-10 p-3 shadow-sm rounded-md  ">
+    <div className="w-full bg-white mt-10 p-3 shadow-sm rounded-md  ">
       <h1 className="text-2xl font-medium p-5">Sales Details</h1>
 
       <div className="h-120">

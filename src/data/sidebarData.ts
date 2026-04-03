@@ -17,7 +17,6 @@ const {
 
 export const sidebarElements = [
   {
-    title: "MAIN",
     items: [
       { id: 1, name: "Dashboard", Icon: Gauge, link: "/admin/dashboard" },
       { id: 2, name: "Users", Icon: Users, link: "/admin/users" },

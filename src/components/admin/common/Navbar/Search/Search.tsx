@@ -7,7 +7,7 @@ function Search({ forMobile }: SearchProps) {
   return (
     <div
       ref={forMobile ? focusInput : null}
-      className={`${!forMobile && "max-md:hidden"}  relative border border-primary-muted rounded-full dark:bg-primary-muted bg-white grow max-w-xl hover:outline-secondary-color hover:outline-2 `}
+      className={`${!forMobile && "max-md:hidden"}  relative border border-primary-muted rounded-full dark:bg-neutral-900 dark:border-none bg-white grow max-w-xl hover:outline-secondary-color hover:outline-2 `}
     >
       <div className="absolute inset-y-0 text-ring flex items-center pl-3 ">
         <SearchIcon />
