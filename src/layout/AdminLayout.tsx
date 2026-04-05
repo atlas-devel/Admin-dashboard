@@ -6,11 +6,11 @@ import Sidebar from "../components/admin/common/Sidebar/Sidebar";
 function AdminLayout() {
   return (
     <SidebarProvider>
-      <section className="h-screen max-w-[2000px] mx-auto flex overflow-hidden bg-secondary-color/2">
+      <section className="h-screen max-w-[2000px] mx-auto flex overflow-hidden  dark:bg-background bg-white">
         <Sidebar />
         <div className="flex-1 ">
           <Navigation />
-          <main className="h-[calc(100vh-80px)] hide-scrollbar  overflow-y-auto  mx-auto p-4 md:p-6 lg:p-8  ">
+          <main className="relative h-[calc(100vh-80px)]  overflow-y-auto  mx-auto p-4 md:p-6 lg:p-8  ">
             <Outlet />
           </main>
         </div>

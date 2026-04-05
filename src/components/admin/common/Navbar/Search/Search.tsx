@@ -7,9 +7,9 @@ function Search({ forMobile }: SearchProps) {
   return (
     <div
       ref={forMobile ? focusInput : null}
-      className={`${!forMobile && "max-md:hidden"}  relative border border-primary-muted rounded-full dark:bg-neutral-900 dark:border-none bg-white grow max-w-xl hover:outline-secondary-color hover:outline-2 `}
+      className={`${!forMobile && "max-md:hidden"}  relative border border-primary-muted rounded-full dark:bg-secondary-color/12 dark:border-secondary-color/20 bg-white grow max-w-xl hover:outline-secondary-color/30 hover:outline-2 `}
     >
-      <div className="absolute inset-y-0 text-ring flex items-center pl-3 ">
+      <div className="absolute inset-y-0 text-ring dark:text-gray-500 flex items-center pl-3 ">
         <SearchIcon />
       </div>
       <input

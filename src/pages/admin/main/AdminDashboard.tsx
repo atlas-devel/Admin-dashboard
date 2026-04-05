@@ -1,5 +1,5 @@
 import StatsCard from "../../../components/admin/Dashboard/StatsCard";
-import { StatsCardData } from "../../../data/PagesData";
+import DashboardData from "@/data/DashboardData";
 import useSidebar from "../../../hooks/useSidebar";
 import { UserGrowthChart } from "../../../components/admin/Dashboard/Charts/UserGrowth";
 import { PaymentStatusChart } from "../../../components/admin/Dashboard/Charts/Payment Status";
@@ -40,7 +40,7 @@ function AdminDashboard() {
       {/* Stats Cards Section */}
       <section className="mb-10">
         <div className={`grid ${statsGridCols} gap-5`}>
-          {StatsCardData.map((stats, index) => (
+          {DashboardData.StatsCardData.map((stats, index) => (
             <StatsCard
               key={stats.title + index}
               title={stats.title}

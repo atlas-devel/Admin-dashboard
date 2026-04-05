@@ -1,4 +1,3 @@
-// src/components/admin/dashboard/charts/PaymentStatusChart.tsx
 import {
   PieChart,
   Pie,
@@ -7,16 +6,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-
-interface PaymentStatusData {
-  status: string;
-  count: number;
-  percentage: number;
-}
-
-interface PaymentStatusChartProps {
-  data: PaymentStatusData[];
-}
+import type { PaymentStatusData } from "../../../../@types/types";
 
 const COLORS = {
   Paid: "#22c55e",
@@ -25,7 +15,7 @@ const COLORS = {
   Pending: "#94a3b8",
 };
 
-export function PaymentStatusChart({ data }: PaymentStatusChartProps) {
+export function PaymentStatusChart({ data }: { data: PaymentStatusData[] }) {
   const chartData = data.map((item) => ({
     name: item.status,
     value: item.count,
@@ -33,7 +23,7 @@ export function PaymentStatusChart({ data }: PaymentStatusChartProps) {
   }));
 
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-black dark:border-gray-800">
+    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-gray-800/20 dark:backdrop-blur-3xl dark:border-gray-800/30">
       <div className="mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Payment Status
@@ -75,7 +65,7 @@ export function PaymentStatusChart({ data }: PaymentStatusChartProps) {
               color: "#ffffff",
             }}
             formatter={(value: number, name: string, props: any) => [
-              `${value} tenants (${props.payload.percentage}%)`,
+              `${value} tenants (${(props.payload as any).percentage}%)`,
               name,
             ]}
           />

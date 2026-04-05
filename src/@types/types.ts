@@ -39,3 +39,22 @@ export interface StatsCardProps {
   isCurrency?: boolean;
   formatCurrency?: boolean;
 }
+
+export interface PaymentStatusData {
+  status: string;
+  count: number;
+  percentage: number;
+}
+export interface Activity {
+  id: number;
+  user: string;
+  action: string;
+  target: string;
+  timestamp: string;
+  status: "success" | "pending" | "failed";
+}
+
+export interface ThemeProps {
+  theme: string;
+  changeTheme: () => void;
+}

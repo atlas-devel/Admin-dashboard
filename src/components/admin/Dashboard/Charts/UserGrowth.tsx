@@ -21,7 +21,7 @@ interface UserGrowthChartProps {
 
 export function UserGrowthChart({ data }: UserGrowthChartProps) {
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-black/10 dark:backdrop-blur-3xl dark:border-gray-800">
+    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-gray-800/20 dark:backdrop-blur-3xl dark:border-gray-800/30">
       <div className="mb-4 flex items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">

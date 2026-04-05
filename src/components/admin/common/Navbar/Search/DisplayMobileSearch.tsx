@@ -1,4 +1,3 @@
-import type { RefObject } from "react";
 import Search from "./Search";
 import { AnimatePresence, motion } from "framer-motion";
 

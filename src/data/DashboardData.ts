@@ -1,4 +1,16 @@
 // src/data/DashboardData.ts
+import type { Activity } from "../@types/types";
+import type { StatsCardProps } from "../@types/types";
+import {
+  Users,
+  Building,
+  UserRound,
+  Warehouse,
+  CheckCircle,
+  Home,
+  Banknote,
+  Clock,
+} from "lucide-react";
 
 export const userGrowthData = [
   { date: "Mar 25", newUsers: 12, activeUsers: 234 },
@@ -52,7 +64,7 @@ export const topLandlordsData = [
   { name: "Eric Nshuti", properties: 4, tenants: 4, revenue: 480000 },
 ];
 
-export const recentActivities = [
+export const recentActivities: Activity[] = [
   {
     id: 1,
     user: "Jean Mugisha",
@@ -118,6 +130,83 @@ export const recentActivities = [
     status: "success",
   },
 ];
+
+const StatsCardData: StatsCardProps[] = [
+  {
+    title: "Total Users",
+    number: 1247,
+    Icon: Users,
+    bgColor:
+      "bg-violet-100  dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600 ",
+    color: "text-violet-500",
+    rate: 8.2,
+  },
+  {
+    title: "Active Landlords",
+    number: 45,
+    Icon: Building,
+    bgColor:
+      "bg-blue-100 dark:bg-gradient-to-r dark:from-purple-500 dark:to-purple-600",
+    color: "text-blue-500",
+    rate: 2.1,
+  },
+  {
+    title: "Active Tenants",
+    number: 892,
+    Icon: UserRound,
+    bgColor:
+      "bg-green-100 dark:bg-gradient-to-r dark:from-green-500 dark:to-green-600",
+    color: "text-green-500",
+    rate: 6.5,
+  },
+  {
+    title: "Total Properties",
+    number: 156,
+    Icon: Warehouse,
+    bgColor:
+      "bg-yellow-100 dark:bg-gradient-to-r dark:from-orange-500 dark:to-orange-600",
+    color: "text-yellow-600",
+    rate: 4.3,
+  },
+  {
+    title: "Properties Available",
+    number: 42,
+    Icon: CheckCircle,
+    bgColor:
+      "bg-emerald-100 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-cyan-600",
+    color: "text-emerald-500",
+    rate: -2.1,
+  },
+  {
+    title: "Properties Occupied",
+    number: 114,
+    Icon: Home,
+    bgColor:
+      "bg-orange-100 dark:bg-gradient-to-r dark:from-indigo-500 dark:to-indigo-600",
+    color: "text-orange-500",
+    rate: 3.7,
+  },
+  {
+    title: "Monthly Revenue",
+    number: 8500000,
+    Icon: Banknote,
+    bgColor:
+      "bg-purple-100 dark:bg-gradient-to-r dark:from-yellow-500 dark:to-yellow-600",
+    color: "text-purple-500",
+    rate: 12.5,
+    formatCurrency: true,
+  },
+  {
+    title: "Pending Verification",
+    number: 7,
+    Icon: Clock,
+    bgColor:
+      "bg-red-100 dark:bg-gradient-to-r dark:from-red-500 dark:to-red-600",
+    color: "text-red-500",
+    rate: -1,
+  },
+];
+
 const DashboardData = {
   userGrowthData,
   revenueData,
@@ -125,6 +214,7 @@ const DashboardData = {
   propertyStatsData,
   topLandlordsData,
   recentActivities,
+  StatsCardData,
 };
 
 export default DashboardData;

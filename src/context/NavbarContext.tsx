@@ -1,9 +1,10 @@
 import { createContext, useRef, type ReactNode, type RefObject } from "react";
 
+/* eslint-disable react-refresh/only-export-components */
+
 interface NavbarContextProps {
   focusInput: RefObject<null | HTMLDivElement>;
 }
-
 export const NavbarContext = createContext<undefined | NavbarContextProps>(
   undefined,
 );

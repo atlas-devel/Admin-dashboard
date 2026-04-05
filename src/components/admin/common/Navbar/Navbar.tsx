@@ -6,14 +6,14 @@ import Profile from "./profile/Profile";
 import LanguageSelection from "./language/LanguageSelection";
 import Menubar from "./Menu/Menubar";
 import AppLogo from "../ui/AppLogo";
-import useSidebar from "../../../../hooks/useSidebar";
+import ToggleTheme from "./toggleTheme/ToggleTheme";
 
 function Navigation() {
   return (
     <NavbarProvider>
       <header>
         <nav
-          className={`bg-white dark:bg-black border-b dark:border-gray-800 shadow-sm flex p-4 py-3 dark:bg-backround relative `}
+          className={`bg-white  dark:backdrop-blur-3xl  dark:bg-background  border-b dark:border-gray-100/10 flex p-4 py-3 dark:bg-backround relative `}
         >
           <AppLogo variants="text-2xl uppercase space-x-1 md:hidden text-center font-bold mr-auto my-auto" />
 
@@ -32,6 +32,7 @@ function Navigation() {
               {/* notification */}
 
               <NotificationBell />
+              <ToggleTheme/>
               <LanguageSelection />
               <Profile />
               <Menubar />

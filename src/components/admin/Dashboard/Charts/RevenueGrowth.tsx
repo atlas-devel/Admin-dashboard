@@ -32,7 +32,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
   const maxRevenue = Math.max(...data.map((item) => item.revenue));
 
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-black dark:border-gray-800">
+    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-gray-800/20 dark:backdrop-blur-3xl dark:border-gray-800/30">
       <div className="mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
           Revenue Trend

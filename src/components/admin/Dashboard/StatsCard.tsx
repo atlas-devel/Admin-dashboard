@@ -26,7 +26,7 @@ function StatsCard({
   };
 
   return (
-    <div className="mt-6 group relative overflow-hidden rounded-xl bg-white dark:bg-white/8  dark:backdrop-blur-2xl p-6 shadow-sm transition-all hover:shadow-md border border-gray-100 dark:border-gray-800">
+    <div className="mt-6 group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800/20  dark:backdrop-blur-3xl p-6 shadow-sm transition-all hover:shadow-md border border-gray-100 dark:border-gray-100/12">
       <div
         className={`absolute -right-8 -top-8 h-24 w-24 rounded-full ${bgColor.replace("100", "50")} opacity-30 blur-2xl transition-opacity group-hover:opacity-50`}
       />
@@ -36,7 +36,7 @@ function StatsCard({
           <p className="text-lg  font-medium text-gray-500 dark:text-white">
             {title}
           </p>
-          <div className={`rounded-xl ${bgColor} p-3 ${color}`}>
+          <div className={`rounded-xl ${bgColor} dark:text-white p-3 ${color}`}>
             <Icon width={20} height={20} />
           </div>
         </div>
@@ -49,16 +49,18 @@ function StatsCard({
 
         <div className="mt-4 flex items-center gap-2">
           <div
-            className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${
+            className={`inline-flex dark:bg-transparent items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${
               isPositive
-                ? "bg-green-50 text-green-600"
-                : "bg-red-50 text-red-600"
+                ? "bg-green-50  text-green-600"
+                : "bg-red-50  text-red-600"
             }`}
           >
             {isPositive ? <TrendingUp size={12} /> : <TrendingDown size={12} />}
             <span>{absRate}%</span>
           </div>
-          <span className="text-xs text-gray-400 ">vs last month</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 ">
+            vs last month
+          </span>
         </div>
       </div>
     </div>

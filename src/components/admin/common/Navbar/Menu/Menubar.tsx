@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "../../ui/Button";
 import { ChevronDown } from "lucide-react";
 import {
@@ -15,7 +14,7 @@ function Menubar() {
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="border border-muted-primary rounded-full w-6 h-6"
+            className="border border-gray-800 rounded-full w-6 h-6"
           >
             <ChevronDown />
           </Button>
