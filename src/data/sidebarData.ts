@@ -26,7 +26,6 @@ export const sidebarElements = [
     ],
   },
   {
-    title: "MANAGEMENT",
     items: [
       { id: 1, name: "Blacklist", Icon: ShieldAlert, link: "/admin/blacklist" },
       {
@@ -50,7 +49,6 @@ export const sidebarElements = [
     ],
   },
   {
-    title: "SYSTEM",
     items: [
       { id: 1, name: "Admin Logs", Icon: ScrollText, link: "/admin/logs" },
       { id: 2, name: "Settings", Icon: Settings, link: "/admin/settings" },

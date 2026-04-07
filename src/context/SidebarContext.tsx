@@ -20,20 +20,22 @@ export const SidebarProvider = ({ children }: { children: ReactNode }) => {
 
   // function to close sidebar automatically when size is small
 
-  const closeSidebar = () => {
-    if (screenWidth < 800) {
-      setisOpen(false);
-    }
-  };
   // listen to screen size in real time
   useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth);
+    console.log("rendered");
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+
+      if (screenWidth < 800) {
+        setisOpen(false);
+      }
+    };
     window.addEventListener("resize", handleResize);
 
-    () => closeSidebar();
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [screenWidth]);
+  }, []);
 
   const value = {
     isOpen,
