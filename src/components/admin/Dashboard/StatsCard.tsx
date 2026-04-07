@@ -6,7 +6,6 @@ function StatsCard({
   number,
   Icon,
   bgColor,
-  color,
   rate,
   isCurrency = false,
 }: StatsCardProps) {
@@ -26,17 +25,19 @@ function StatsCard({
   };
 
   return (
-    <div className="mt-6 group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800/20  dark:backdrop-blur-3xl p-6 shadow-sm transition-all hover:shadow-md border border-gray-100 dark:border-gray-100/12">
+    <div className="mt-6 group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800/20  dark:backdrop-blur-3xl p-6 shadow-sm shadow-secondary-color/20 transition-all hover:shadow-md border border-gray-100 dark:border-gray-100/12">
       <div
         className={`absolute -right-8 -top-8 h-24 w-24 rounded-full ${bgColor.replace("100", "50")} opacity-30 blur-2xl transition-opacity group-hover:opacity-50`}
       />
 
       <div className="relative">
         <div className="flex items-center justify-between">
-          <p className="text-lg  font-medium text-gray-500 dark:text-white">
+          <p className="text-lg  font-medium text-gray-600  dark:text-white">
             {title}
           </p>
-          <div className={`rounded-xl ${bgColor} dark:text-white p-3 ${color}`}>
+          <div
+            className={`rounded-xl bg-linear-90 from-blue-500 to-blue-600 text-white dark:text-white p-3 ${bgColor}`}
+          >
             <Icon width={20} height={20} />
           </div>
         </div>

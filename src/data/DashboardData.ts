@@ -138,34 +138,27 @@ const StatsCardData: StatsCardProps[] = [
     Icon: Users,
     bgColor:
       "bg-violet-100  dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600 ",
-    color: "text-violet-500",
     rate: 8.2,
   },
   {
     title: "Active Landlords",
     number: 45,
     Icon: Building,
-    bgColor:
-      "bg-blue-100 dark:bg-gradient-to-r dark:from-purple-500 dark:to-purple-600",
-    color: "text-blue-500",
+    bgColor: "dark:bg-gradient-to-r dark:from-purple-500 dark:to-purple-600",
     rate: 2.1,
   },
   {
     title: "Active Tenants",
     number: 892,
     Icon: UserRound,
-    bgColor:
-      "bg-green-100 dark:bg-gradient-to-r dark:from-green-500 dark:to-green-600",
-    color: "text-green-500",
+    bgColor: " dark:bg-gradient-to-r dark:from-green-500 dark:to-green-600",
     rate: 6.5,
   },
   {
     title: "Total Properties",
     number: 156,
     Icon: Warehouse,
-    bgColor:
-      "bg-yellow-100 dark:bg-gradient-to-r dark:from-orange-500 dark:to-orange-600",
-    color: "text-yellow-600",
+    bgColor: " dark:bg-gradient-to-r dark:from-orange-500 dark:to-orange-600",
     rate: 4.3,
   },
   {
@@ -174,7 +167,6 @@ const StatsCardData: StatsCardProps[] = [
     Icon: CheckCircle,
     bgColor:
       "bg-emerald-100 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-cyan-600",
-    color: "text-emerald-500",
     rate: -2.1,
   },
   {
@@ -183,7 +175,6 @@ const StatsCardData: StatsCardProps[] = [
     Icon: Home,
     bgColor:
       "bg-orange-100 dark:bg-gradient-to-r dark:from-indigo-500 dark:to-indigo-600",
-    color: "text-orange-500",
     rate: 3.7,
   },
   {
@@ -192,9 +183,9 @@ const StatsCardData: StatsCardProps[] = [
     Icon: Banknote,
     bgColor:
       "bg-purple-100 dark:bg-gradient-to-r dark:from-yellow-500 dark:to-yellow-600",
-    color: "text-purple-500",
     rate: 12.5,
     formatCurrency: true,
+    isCurrency: true,
   },
   {
     title: "Pending Verification",
@@ -202,7 +193,6 @@ const StatsCardData: StatsCardProps[] = [
     Icon: Clock,
     bgColor:
       "bg-red-100 dark:bg-gradient-to-r dark:from-red-500 dark:to-red-600",
-    color: "text-red-500",
     rate: -1,
   },
 ];

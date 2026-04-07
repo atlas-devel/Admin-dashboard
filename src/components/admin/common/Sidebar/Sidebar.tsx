@@ -15,7 +15,7 @@ function Sidebar() {
           animate={{ width: isOpen ? 270 : 0, opacity: 1, x: 0 }}
           exit={{ x: -100 }}
           transition={{ ease: "easeInOut", duration: 0.3 }}
-          className="hidden bg-gray-800  dark:bg-background dark:backdrop-blur-3xl  py-6 overflow-auto hide-scrollbar border-r gap-6 border-gray-100 dark:border-gray-100/10 shadow-sm md:flex flex-col h-screen "
+          className="hidden bg-blue-50 dark:bg-background dark:backdrop-blur-3xl  py-6 overflow-auto hide-scrollbar border-r gap-6 border-gray-100 dark:border-gray-100/10 shadow-sm md:flex flex-col h-screen "
         >
           <AppLogo variants="text-3xl  text-center font-bold " />
           {sidebarElements.map((item) => (

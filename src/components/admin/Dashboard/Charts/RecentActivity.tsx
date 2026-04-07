@@ -30,7 +30,7 @@ export function RecentActivity({ data }: RecentActivityProps) {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case "success":
-        return <CheckCircle size={16} className="text-green-500" />;
+        return <CheckCircle size={16} className="text-[#4880ff]" />;
       case "pending":
         return <Clock size={16} className="text-yellow-500" />;
       case "failed":

@@ -10,9 +10,9 @@ function SidebarItem({ items }: { items: SidebarInfo[] }) {
           <NavLink
             to={link}
             className={({ isActive }) =>
-              `flex  items-center gap-4  duration-200  dark:hover:bg-gradient-to-l from-blue-300 to-blue-600 dark:text-gray-100  mb-1 text-primary-text  group-hover:bg-secondary-color group-hover:text-white py-3 w-full mx-4 rounded-md px-3 ${
+              `flex  items-center gap-4   duration-200  hover:bg-gradient-to-l from-blue-300 to-blue-600 dark:text-gray-100  mb-1 text-gray-700  group-hover:bg-secondary-color group-hover:text-white py-3 w-full mx-4 rounded-md px-3 ${
                 isActive
-                  ? "bg-secondary-color dark:bg-gradient-to-l from-blue-300 to-blue-600 dark:text-white "
+                  ? "bg-gradient-to-l from-blue-100 to-blue-600 text-white "
                   : " dark:hover:text-white hover:bg-blue-500 hover:text-white"
               }`
             }
@@ -20,7 +20,7 @@ function SidebarItem({ items }: { items: SidebarInfo[] }) {
             <span className="text-sm pl-3">
               <Icon width={20} height={20} />
             </span>
-            <p className="text-[15px] font-medium">{name}</p>
+            <p className="text-[15px] font-semibold">{name}</p>
           </NavLink>
         </div>
       ))}

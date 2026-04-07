@@ -14,7 +14,7 @@ function Menubar() {
         <DropdownMenuTrigger asChild>
           <Button
             variant="ghost"
-            className="border border-gray-800 rounded-full w-6 h-6"
+            className="border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-gray-800 rounded-full w-6 h-6"
           >
             <ChevronDown />
           </Button>

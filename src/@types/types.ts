@@ -34,7 +34,6 @@ export interface StatsCardProps {
   number: number;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   bgColor: string;
-  color: string;
   rate: number;
   isCurrency?: boolean;
   formatCurrency?: boolean;
@@ -57,4 +56,13 @@ export interface Activity {
 export interface ThemeProps {
   theme: string;
   changeTheme: () => void;
+}
+
+export interface RealEstateUser {
+  id: string;
+  name: string;
+  role: "admin" | "agent" | "landlord" | "renter" | "guest";
+  group: string;
+  status: "Active" | "Inactive" | "Pending";
+  createdAt: string;
 }

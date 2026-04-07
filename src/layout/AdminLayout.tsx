@@ -6,7 +6,7 @@ import Sidebar from "../components/admin/common/Sidebar/Sidebar";
 function AdminLayout() {
   return (
     <SidebarProvider>
-      <section className="h-screen max-w-[2000px] mx-auto flex overflow-hidden  dark:bg-background bg-white">
+      <section className="h-screen max-w-[2000px] mx-auto flex overflow-hidden  dark:bg-background bg-blue-50/40">
         <Sidebar />
         <div className="flex-1 ">
           <Navigation />

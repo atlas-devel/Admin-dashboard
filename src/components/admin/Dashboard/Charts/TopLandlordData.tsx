@@ -55,8 +55,8 @@ export function TopLandlordsChart({ data }: TopLandlordsChartProps) {
               x2="1"
               y2="0"
             >
-              <stop offset="0%" stopColor="#8b5cf6" />
-              <stop offset="100%" stopColor="#c4b5fd" />
+              <stop offset="0%" stopColor="#4880ff" />
+              <stop offset="100%" stopColor="#93b1ff" />
             </linearGradient>
           </defs>
 

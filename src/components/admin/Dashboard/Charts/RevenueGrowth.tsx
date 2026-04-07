@@ -49,8 +49,8 @@ export function RevenueChart({ data }: RevenueChartProps) {
         >
           <defs>
             <linearGradient id="barGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#8b5cf6" />
-              <stop offset="100%" stopColor="#3b82f6" />
+              <stop offset="0%" stopColor="#93b1ff" />
+              <stop offset="100%" stopColor="#4880ff" />
             </linearGradient>
           </defs>
 
@@ -94,7 +94,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
               <Cell
                 key={`cell-${index}`}
                 fill={
-                  entry.revenue === maxRevenue ? "url(#barGradient)" : "#4f46e5"
+                  entry.revenue === maxRevenue ? "url(#barGradient)" : "#4880ff"
                 }
                 opacity={entry.revenue === maxRevenue ? 1 : 0.6}
               />

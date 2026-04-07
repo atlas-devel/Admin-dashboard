@@ -9,7 +9,7 @@ import {
 import type { PaymentStatusData } from "../../../../@types/types";
 
 const COLORS = {
-  Paid: "#22c55e",
+  Paid: "#4880ff",
   "Grace Period": "#eab308",
   Overdue: "#ef4444",
   Pending: "#94a3b8",
@@ -62,8 +62,10 @@ export function PaymentStatusChart({ data }: { data: PaymentStatusData[] }) {
               backgroundColor: "#1a1a1a",
               border: "1px solid #333333",
               borderRadius: "8px",
-              color: "#ffffff",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.5)",
             }}
+            itemStyle={{ color: "white" }}
+            labelStyle={{ color: "white" }}
             formatter={(value: number, name: string, props: any) => [
               `${value} tenants (${(props.payload as any).percentage}%)`,
               name,

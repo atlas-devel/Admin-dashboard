@@ -26,15 +26,12 @@ function AdminDashboard() {
     : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4";
 
   return (
-    <div className="p-4 md:p-6 lg:p-8">
+    <div className="p-4 md:p-6 lg:py-2 lg:p-8">
       {/* Page Header */}
-      <div className="mb-8">
+      <div className="mb-2">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
           Dashboard
         </h1>
-        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-          Welcome back! Here's what's happening with your platform today.
-        </p>
       </div>
 
       {/* Stats Cards Section */}
@@ -46,7 +43,6 @@ function AdminDashboard() {
               title={stats.title}
               number={stats.number}
               Icon={stats.Icon}
-              color={stats.color}
               bgColor={stats.bgColor}
               rate={stats.rate}
               isCurrency={stats.isCurrency}
@@ -57,13 +53,10 @@ function AdminDashboard() {
 
       {/* Charts Section */}
       <section>
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-900 md:text-2xl dark:text-white ">
+        <div className="mb-6 pt-10">
+          <h2 className="text-2xl font-semibold text-gray-900 md:text-2xl dark:text-white ">
             Analytics
           </h2>
-          <p className="text-sm text-gray-500 dark:text-gray-400 ">
-            Visual insights into your platform performance
-          </p>
         </div>
 
         {/* Row 1: User Growth + Payment Status */}

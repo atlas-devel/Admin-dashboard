@@ -2,7 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
-/*---break---  */
+
+/* Override default Tailwind v4 dark mode to use the class strategy */
+@custom-variant dark (&:is(.dark, .dark *));
+
 
 :root{
   --primary-text:#202224;
@@ -20,6 +23,9 @@
   --label-hold:#ffa756;
   --label-reject:#ef3826;
   --label-processing:#6225ff;
+
+  --destructive:oklch(0.704 0.191 22.216);
+
 }
 
 .dark{
@@ -33,7 +39,6 @@
   --back-border:#cfcfcf;
   --background:#010611;
   --foreground:oklch(0.985 0 0);
-  --destructive:oklch(0.704 0.191 22.216);
 }
 
 @theme inline{

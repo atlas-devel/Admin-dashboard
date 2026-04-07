@@ -20,7 +20,7 @@ function LanguageSelection() {
   const handleLanguage = (lan: Language) => setLanguage(lan);
 
   return (
-    <section className="hidden lg:flex gap-4 items-center mx-6  ">
+    <section className="hidden lg:flex gap-4 items-center mx-2  ">
       {/* flag */}
       <div className="w-10 ease-in-out duration-300  rounded-sm overflow-hidden">
         <img className="" src={language?.flag} alt="" />
@@ -29,15 +29,19 @@ function LanguageSelection() {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className="text-ring font-medium transition-transform border border-gray-800 duration-500 ease-in-out "
+            className="text-gray-800 dark:text-gray-100 font-medium transition-transform border border-gray-300 dark:border-secondary-color/50 duration-500 ease-in-out "
           >
             {language?.language}
             <ChevronDown />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="border border-transparent  dark:border-secondary-color/40 text-gray-800 dark:text-gray-100 bg-white dark:bg-transparent ">
           {languagesToSwitchWithFlags.map((lan, idx) => (
-            <DropdownMenuItem onClick={() => handleLanguage(lan)} key={idx}>
+            <DropdownMenuItem
+              className="hover:bg-secondary-color/90 hover:text-white"
+              onClick={() => handleLanguage(lan)}
+              key={idx}
+            >
               {lan.language}
             </DropdownMenuItem>
           ))}

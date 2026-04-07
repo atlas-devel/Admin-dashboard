@@ -21,7 +21,7 @@ interface UserGrowthChartProps {
 
 export function UserGrowthChart({ data }: UserGrowthChartProps) {
   return (
-    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-gray-800/20 dark:backdrop-blur-3xl dark:border-gray-800/30">
+    <div className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 dark:bg-gray-800/20 dark:backdrop-blur-3xl dark:border-gray-800/30 shadow-secondary-color/20 hover:shadow-md">
       <div className="mb-4 flex items-center justify-between">
         <div>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -33,11 +33,11 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
         </div>
         <div className="flex items-center gap-4 text-sm">
           <div className="flex items-center gap-2">
-            <div className="h-3 w-3 rounded-full bg-blue-500" />
+            <div className="h-3 w-3 rounded-full bg-purple-500" />
             <span className="text-gray-600 dark:text-gray-400">New Users</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="h-3 w-3 rounded-full bg-green-500" />
+            <div className="h-3 w-3 rounded-full bg-[#4880ff]" />
             <span className="text-gray-600 dark:text-gray-400">
               Active Users
             </span>
@@ -51,23 +51,23 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <defs>
-            {/* Blue Gradient for New Users Line */}
+            {/* Purple Gradient for New Users Line */}
             <linearGradient id="blueGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#3b82f6" />
-              <stop offset="50%" stopColor="#8b5cf6" />
-              <stop offset="100%" stopColor="#06b6d4" />
+              <stop offset="0%" stopColor="#8b5cf6" />
+              <stop offset="50%" stopColor="#a78bfa" />
+              <stop offset="100%" stopColor="#c4b5fd" />
             </linearGradient>
 
-            {/* Green Gradient for Active Users Line */}
+            {/* Blue Gradient for Active Users Line */}
             <linearGradient id="greenGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#22c55e" />
-              <stop offset="100%" stopColor="#10b981" />
+              <stop offset="0%" stopColor="#4880ff" />
+              <stop offset="100%" stopColor="#93b1ff" />
             </linearGradient>
 
             {/* Glow Effect Filters for Dark Mode */}
             <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4" result="blur" />
-              <feFlood floodColor="#3b82f6" floodOpacity="0.4" />
+              <feFlood floodColor="#8b5cf6" floodOpacity="0.4" />
               <feComposite in2="blur" operator="in" />
               <feMerge>
                 <feMergeNode />
@@ -77,7 +77,7 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
 
             <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="4" result="blur" />
-              <feFlood floodColor="#22c55e" floodOpacity="0.4" />
+              <feFlood floodColor="#4880ff" floodOpacity="0.4" />
               <feComposite in2="blur" operator="in" />
               <feMerge>
                 <feMergeNode />
@@ -128,10 +128,10 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
             dataKey="newUsers"
             stroke="url(#blueGradient)"
             strokeWidth={2.5}
-            dot={{ fill: "#3b82f6", strokeWidth: 2, r: 4, stroke: "#000000" }}
+            dot={{ fill: "#8b5cf6", strokeWidth: 2, r: 4, stroke: "#000000" }}
             activeDot={{
               r: 6,
-              fill: "#8b5cf6",
+              fill: "#a78bfa",
               stroke: "#000000",
               strokeWidth: 2,
             }}
@@ -142,10 +142,10 @@ export function UserGrowthChart({ data }: UserGrowthChartProps) {
             dataKey="activeUsers"
             stroke="url(#greenGradient)"
             strokeWidth={2.5}
-            dot={{ fill: "#22c55e", strokeWidth: 2, r: 4, stroke: "#000000" }}
+            dot={{ fill: "#4880ff", strokeWidth: 2, r: 4, stroke: "#000000" }}
             activeDot={{
               r: 6,
-              fill: "#10b981",
+              fill: "#93b1ff",
               stroke: "#000000",
               strokeWidth: 2,
             }}
