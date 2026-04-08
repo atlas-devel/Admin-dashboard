@@ -1,3 +1,5 @@
+import type React from "react";
+
 export interface SidebarInfo {
   id: number;
   name: string;
@@ -65,4 +67,11 @@ export interface RealEstateUser {
   group: string;
   status: "Active" | "Inactive" | "Pending";
   createdAt: string;
+}
+
+export interface UserTablePaginationProps {
+  currentPage: number;
+  totalPages: number;
+  totalusers: number;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }
