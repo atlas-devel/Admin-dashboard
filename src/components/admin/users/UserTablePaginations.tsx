@@ -24,10 +24,7 @@ function UserTablePaginations({
         </button>
         <div className="flex mx-6 gap-2">
           <span className="w-7 h-7 font-semibold rounded-full bg-linear-to-l from-blue-500 to-blue-800 flex items-center justify-center ">
-            1
-          </span>
-          <span className="w-7 h-7 font-semibold rounded-full bg-linear-to-l from-blue-500 to-blue-800 flex items-center justify-center">
-            2
+            {currentPage}
           </span>
         </div>
         <button

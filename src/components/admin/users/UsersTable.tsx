@@ -24,7 +24,9 @@ function UsersTable() {
           <div className="max-lg:hidden">Created At</div>
         </div>
 
-        <UserTableRow start={start} end={end} />
+        <UserTableRow
+          start={start}
+          end={end} />
         <UserTablePaginations
           currentPage={currentPage}
           totalPages={totalPages}

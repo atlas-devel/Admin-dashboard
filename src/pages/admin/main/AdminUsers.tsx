@@ -1,5 +1,4 @@
 import UserSearchFilter from "../../../components/admin/users/UserSearchFilter";
-import UsersSearch from "../../../components/admin/users/UsersSearch";
 import UsersTable from "../../../components/admin/users/UsersTable";
 
 function AdminUsers() {
