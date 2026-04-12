@@ -9,6 +9,8 @@ export const SidebarContext = createContext<SidebarContextType | undefined>(
 
 export const SidebarProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setisOpen] = useState<boolean>(false);
+ 
+  //eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
   // toggle sidebar function
@@ -21,12 +23,14 @@ export const SidebarProvider = ({ children }: { children: ReactNode }) => {
   // function to close sidebar automatically when size is small
 
   // listen to screen size in real time
+
   useEffect(() => {
     console.log("rendered");
     const handleResize = () => {
-      setScreenWidth(window.innerWidth);
+      const currentWidth = window.innerWidth;
+      setScreenWidth(currentWidth);
 
-      if (screenWidth < 800) {
+      if (currentWidth < 800) {
         setisOpen(false);
       }
     };
