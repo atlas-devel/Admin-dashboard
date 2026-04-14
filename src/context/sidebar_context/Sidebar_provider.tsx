@@ -1,25 +1,14 @@
-import { createContext, useEffect, useState, type ReactNode } from "react";
-import type { SidebarContextType } from "../@types/types";
-
-/* eslint-disable react-refresh/only-export-components */
-
-export const SidebarContext = createContext<SidebarContextType | undefined>(
-  undefined,
-);
+import { useState, useEffect } from "react";
+import type { ReactNode } from "react";
+import { SidebarContext } from "./SidebarContext";
 
 export const SidebarProvider = ({ children }: { children: ReactNode }) => {
   const [isOpen, setisOpen] = useState<boolean>(false);
-
-  // toggle sidebar function
 
   const toggleSidebar = () => {
     setisOpen((prev) => !prev);
     console.log(isOpen);
   };
-
-  // function to close sidebar automatically when size is small
-
-  // listen to screen size in real time
 
   useEffect(() => {
     console.log("rendered");

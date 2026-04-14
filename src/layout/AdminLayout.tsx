@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "../components/admin/common/Navbar/Navbar";
-import { SidebarProvider } from "../context/SidebarContext";
 import Sidebar from "../components/admin/common/Sidebar/Sidebar";
+import { SidebarProvider } from "../context/sidebar_context/Sidebar_provider";
 
 function AdminLayout() {
   return (
