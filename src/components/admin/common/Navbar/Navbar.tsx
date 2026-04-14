@@ -1,12 +1,12 @@
 import NotificationBell from "./notification/NotificationBell";
 import Search from "./Search/Search";
 import SidebarToggle from "./toggleSidebar/SidebarToggle";
-import { NavbarProvider } from "../../../../context/NavbarContext";
 import Profile from "./profile/Profile";
 import LanguageSelection from "./language/LanguageSelection";
 import Menubar from "./Menu/Menubar";
 import AppLogo from "../ui/AppLogo";
 import ToggleTheme from "./toggleTheme/ToggleTheme";
+import { NavbarProvider } from "../../../../context/navbar_context/NavbarProvider";
 
 function Navigation() {
   return (
