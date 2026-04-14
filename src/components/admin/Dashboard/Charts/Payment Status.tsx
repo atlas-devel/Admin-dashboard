@@ -66,8 +66,12 @@ export function PaymentStatusChart({ data }: { data: PaymentStatusData[] }) {
             }}
             itemStyle={{ color: "white" }}
             labelStyle={{ color: "white" }}
-            formatter={(value: number, name: string, props: any) => [
-              `${value} tenants (${(props.payload as any).percentage}%)`,
+            formatter={(
+              value: number,
+              name: string,
+              props: { payload?: { percentage?: number } },
+            ) => [
+              `${value} tenants (${props.payload?.percentage ?? 0}%)`,
               name,
             ]}
           />

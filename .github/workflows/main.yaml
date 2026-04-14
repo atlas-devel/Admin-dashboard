@@ -1,6 +1,9 @@
-name: admin_dashboard 
+name: admin_dashboard_ci
 on: 
   push:
+    branches: [main]
+
+  pull_request:
     branches: [main]
   
 jobs:
