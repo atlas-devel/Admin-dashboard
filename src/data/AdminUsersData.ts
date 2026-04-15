@@ -242,3 +242,31 @@ export const rwandaUsersData: RealEstateUser[] = [
     createdAt: "2024-02-15T10:30:00Z",
   },
 ];
+
+export const UserRoles: { id: number; role: string }[] = [
+  { id: 0, role: "All Roles" },
+  { id: 1, role: "Admin" },
+  { id: 2, role: "Agent" },
+  {
+    id: 3,
+    role: "Landlord",
+  },
+  {
+    id: 4,
+    role: "Renter",
+  },
+  {
+    id: 5,
+    role: "Guest",
+  },
+];
+
+export const status: { id: number; status: string }[] = [
+  { id: 0, status: "All Status" },
+  { id: 1, status: "Active" },
+  { id: 2, status: "Inactive" },
+  {
+    id: 3,
+    status: "Pending",
+  },
+];

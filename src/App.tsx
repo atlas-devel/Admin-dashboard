@@ -1,4 +1,4 @@
-import AppRoutes from "./routes";
+import AppRoutes from "./routes/Admin.routes";
 
 function App() {
   return (
