@@ -33,7 +33,7 @@ function UsersSearch() {
   }, [debouncedQuery, setUsers]);
 
   return (
-    <div className="relative border shadow-inner shadow-gray-50 dark:shadow-none  border-gray-300 dark:border-gray-800  w-full md:max-w-[45%] bg-white  dark:bg-gray-800/60 rounded-2xl overflow-hidden  ">
+    <div className=" min-w-0 relative border shadow-inner shadow-gray-50 dark:shadow-none  border-gray-300 dark:border-gray-800  w-full md:max-w-[45%] bg-white  dark:bg-gray-800/60 rounded-2xl overflow-hidden  ">
       <input
         value={searchQuery}
         onChange={handleSearch}
