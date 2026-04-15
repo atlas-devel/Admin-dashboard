@@ -12,15 +12,11 @@ A comprehensive property management administration dashboard built with React, T
 
 ## Screenshots
 
-<!-- ADD SCREENSHOT 1 HERE -->
-> **[Screenshot 1 Placeholder: Dashboard Overview]**
-> Add an image showing the main dashboard with statistics and charts here.
-> `![Dashboard Overview](./docs/images/dashboard-overview.png)`
+### Dark Mode
+![Dashboard Dark Mode](./public/dark%20mode.png)
 
-<!-- ADD SCREENSHOT 2 HERE -->
-> **[Screenshot 2 Placeholder: User Management]**
-> Add an image showing the user data table, search, and filtering capabilities.
-> `![User Management](./docs/images/user-management.png)`
+### Light Mode
+![Dashboard Light Mode](./public/light%20mode.png)
 
 ## Tech Stack
 
