@@ -51,9 +51,9 @@ function UsersFilter() {
   }, [currentRole, currentStatus, setUsers]);
   useEffect(() => {}, [currentStatus]);
   return (
-    <div className="flex items-center gap-8 ">
+    <div className="flex items-center md:gap-8 max-sm:flex-col flex-row max-sm:gap-2">
       {/* filter by role */}
-      <div className="max-md:w-full md:max-w-130 dark:bg-gray-800/60 rounded-lg p-0.5 px-1">
+      <div className="min-h-fit max-md:w-full md:max-w-130 dark:bg-gray-800/60 rounded-lg p-0.5 px-1">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="w-full  text-gray-600 border border-gray-600 dark:border-none dark:text-gray-400 font-medium tracking-wider ">
@@ -78,7 +78,7 @@ function UsersFilter() {
       </div>
       {/* filter by status */}
 
-      <div className="max-md:w-full md:max-w-130 dark:bg-gray-800/60 rounded-lg p-0.5 px-1">
+      <div className="min-h-fit max-md:w-full md:max-w-130 dark:bg-gray-800/60 rounded-lg p-0.5 px-1">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button className="w-full  text-gray-600 border border-gray-600 dark:border-none dark:text-gray-400 font-medium tracking-wider ">

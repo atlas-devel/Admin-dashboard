@@ -11,6 +11,7 @@ export const routes = {
   MOVE_OUT_REQUESTS: "/admin/move-out-requests",
   VERIFY_PROPERTIES: "/admin/verify-properties",
   REPORTS: "/admin/reports",
+  ADDUSER: "/admin/users/add",
 
   // System
   ADMIN_LOGS: "/admin/logs",
