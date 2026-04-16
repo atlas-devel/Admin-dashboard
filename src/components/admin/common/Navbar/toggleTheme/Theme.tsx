@@ -5,12 +5,12 @@ function Theme({ theme, changeTheme }: ThemeProps) {
   return (
     <div
       onClick={changeTheme}
-      className="hidden md:block ml-3 w-14 px-1.5 bg-white dark:bg-secondary-color/14 py-[1px] cursor-pointer border  border-gray-200 dark:border-secondary-color/40 rounded-full "
+      className="hidden md:block  p-1.5 hover:bg-gray-900/10 dark:hover:bg-gray-900/10   cursor-pointer  shadow-secondary-color   border-gray-200 dark:border-secondary-color/40 rounded-full "
     >
       <span
-        className={`bg-black  rounded-full h-4 w-4  flex items-center justify-center ${theme === "light" && "ml-auto bg-white"}`}
+        className={` text-gray-300   ${theme === "light" && "text-gray-900"}`}
       >
-        {theme === "dark" ? <Moon size={14} /> : <Sun />}
+        {theme === "dark" ? <Moon size={18} /> : <Sun size={18} />}
       </span>
     </div>
   );
