@@ -5,7 +5,8 @@ export const UserManagementContext = createContext<
   | {
       users: RealEstateUser[];
       setUsers: React.Dispatch<React.SetStateAction<RealEstateUser[]>>;
+      currentPage: number;
+      setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
     }
   | undefined
 >(undefined);
-

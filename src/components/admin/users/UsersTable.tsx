@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import UserTablePaginations from "./UserTablePaginations";
 import Table from "./Table";
-import { rwandaUsersData } from "../../../data/AdminUsersData";
+import { UserManagementContext } from "../../../context/user_management_context/UserManagementContext";
 
 function UsersTable() {
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const totalUsers = rwandaUsersData.length;
+  const ctx = useContext(UserManagementContext);
+  if (!ctx) throw new Error("UserManagementContext is undefined");
+  const { currentPage, setCurrentPage } = ctx;
+  const { users } = useContext(UserManagementContext)!;
+  const totalUsers = users.length;
   const totalPages = Math.ceil(totalUsers / 10);
   const start = (currentPage - 1) * 10;
   const end = start + 10;
