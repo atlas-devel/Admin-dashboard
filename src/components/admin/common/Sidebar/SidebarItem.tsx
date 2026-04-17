@@ -15,7 +15,7 @@ function SidebarItem({ items }: { items: SidebarInfo[] }) {
           <NavLink
             to={link}
             className={({ isActive }) =>
-              `flex  items-center gap-4  transform-all text-gray-800 dark:text-white duration-300  hover:bg-gradient-to-l from-blue-300 to-blue-600 dark:text-gray-100  mb-2  group-hover:bg-secondary-color group-hover:text-white py-2 w-full ${isOpen && "mx-4"} duration-300 overflow-hidden rounded-md px-3 ${
+              `flex  items-center gap-4  transform-all text-gray-800        hover:bg-gradient-to-l from-blue-300 to-blue-600 dark:text-gray-100  mb-2  group-hover:bg-secondary-color group-hover:text-white py-2 w-full ${isOpen && "mx-4"} duration-300 overflow-hidden rounded-md px-3 ${
                 isActive &&
                 "bg-gradient-to-l text-white from-blue-100 to-blue-600 "
               }`
