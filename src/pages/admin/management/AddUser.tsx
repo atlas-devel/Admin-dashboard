@@ -1,4 +1,4 @@
-import { Camera, ShieldCheck } from "lucide-react";
+import { Camera } from "lucide-react";
 import {
   districts,
   registrationRoles,
