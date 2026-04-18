@@ -2,14 +2,18 @@
 import type { Activity } from "../@types/types";
 import type { StatsCardProps } from "../@types/types";
 import {
-  Users,
-  Building,
-  UserRound,
-  Warehouse,
-  CheckCircle,
-  Home,
-  Banknote,
-  Clock,
+  Users, // Total Users
+  UserCheck, // Active Users
+  Building, // Active Landlords
+  UserRound, // Active Tenants
+  Briefcase, // Active Agents
+  Warehouse, // Total Properties
+  CheckCircle, // Properties Available
+  Home, // Properties Occupied
+  Banknote, // Monthly Revenue
+  Clock, // Pending Verification
+  ShieldAlert, // Blacklist Reports
+  MoveRight, // Move Out Requests
 } from "lucide-react";
 
 export const userGrowthData = [
@@ -137,28 +141,47 @@ const StatsCardData: StatsCardProps[] = [
     number: 1247,
     Icon: Users,
     bgColor:
-      "bg-violet-100  dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600 ",
+      "bg-violet-100 dark:bg-gradient-to-r dark:from-violet-500 dark:to-violet-600",
     rate: 8.2,
+  },
+  {
+    title: "Active Users",
+    number: 892,
+    Icon: UserCheck,
+    bgColor:
+      "bg-blue-100 dark:bg-gradient-to-r dark:from-blue-500 dark:to-blue-600",
+    rate: 5.4,
   },
   {
     title: "Active Landlords",
     number: 45,
     Icon: Building,
-    bgColor: "dark:bg-gradient-to-r dark:from-purple-500 dark:to-purple-600",
+    bgColor:
+      "bg-emerald-100 dark:bg-gradient-to-r dark:from-emerald-500 dark:to-emerald-600",
     rate: 2.1,
   },
   {
     title: "Active Tenants",
     number: 892,
     Icon: UserRound,
-    bgColor: " dark:bg-gradient-to-r dark:from-green-500 dark:to-green-600",
+    bgColor:
+      "bg-green-100 dark:bg-gradient-to-r dark:from-green-500 dark:to-green-600",
     rate: 6.5,
+  },
+  {
+    title: "Active Agents",
+    number: 8,
+    Icon: Briefcase,
+    bgColor:
+      "bg-cyan-100 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-cyan-600",
+    rate: 0.5,
   },
   {
     title: "Total Properties",
     number: 156,
     Icon: Warehouse,
-    bgColor: " dark:bg-gradient-to-r dark:from-orange-500 dark:to-orange-600",
+    bgColor:
+      "bg-amber-100 dark:bg-gradient-to-r dark:from-amber-500 dark:to-amber-600",
     rate: 4.3,
   },
   {
@@ -166,7 +189,7 @@ const StatsCardData: StatsCardProps[] = [
     number: 42,
     Icon: CheckCircle,
     bgColor:
-      "bg-emerald-100 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-cyan-600",
+      "bg-teal-100 dark:bg-gradient-to-r dark:from-teal-500 dark:to-teal-600",
     rate: -2.1,
   },
   {
@@ -174,7 +197,7 @@ const StatsCardData: StatsCardProps[] = [
     number: 114,
     Icon: Home,
     bgColor:
-      "bg-orange-100 dark:bg-gradient-to-r dark:from-indigo-500 dark:to-indigo-600",
+      "bg-indigo-100 dark:bg-gradient-to-r dark:from-indigo-500 dark:to-indigo-600",
     rate: 3.7,
   },
   {
@@ -182,9 +205,8 @@ const StatsCardData: StatsCardProps[] = [
     number: 8500000,
     Icon: Banknote,
     bgColor:
-      "bg-purple-100 dark:bg-gradient-to-r dark:from-yellow-500 dark:to-yellow-600",
+      "bg-purple-100 dark:bg-gradient-to-r dark:from-purple-500 dark:to-purple-600",
     rate: 12.5,
-    formatCurrency: true,
     isCurrency: true,
   },
   {
@@ -194,6 +216,22 @@ const StatsCardData: StatsCardProps[] = [
     bgColor:
       "bg-red-100 dark:bg-gradient-to-r dark:from-red-500 dark:to-red-600",
     rate: -1,
+  },
+  {
+    title: "Blacklist Reports",
+    number: 4,
+    Icon: ShieldAlert,
+    bgColor:
+      "bg-rose-100 dark:bg-gradient-to-r dark:from-rose-500 dark:to-rose-600",
+    rate: 2,
+  },
+  {
+    title: "Move Out Requests",
+    number: 3,
+    Icon: MoveRight,
+    bgColor:
+      "bg-orange-100 dark:bg-gradient-to-r dark:from-orange-500 dark:to-orange-600",
+    rate: 1.5,
   },
 ];
 

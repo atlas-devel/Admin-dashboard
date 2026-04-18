@@ -67,6 +67,36 @@ function AddUser() {
                   className="p-3 bg-gray-100 rounded-lg dark:bg-gray-800/20 dark:backdrop-blur-3xl border-gray-100 shadow-sm border dark:border-gray-100/20 outline-none"
                 />
               </div>
+              <div className="flex flex-col gap-1 w-full md:max-w-[48%]">
+                <label
+                  htmlFor="email"
+                  className="tracking-wider uppercase text-xs font-semibold"
+                >
+                  Email:
+                </label>
+
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="e.g example@gmail.com"
+                  className="p-3 bg-gray-100 rounded-lg dark:bg-gray-800/20 dark:backdrop-blur-3xl border-gray-100 shadow-sm border dark:border-gray-100/20 outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1 w-full md:max-w-[48%]">
+                <label
+                  htmlFor="email"
+                  className="tracking-wider uppercase text-xs font-semibold"
+                >
+                  Email:
+                </label>
+
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="e.g example@gmail.com"
+                  className="p-3 bg-gray-100 rounded-lg dark:bg-gray-800/20 dark:backdrop-blur-3xl border-gray-100 shadow-sm border dark:border-gray-100/20 outline-none"
+                />
+              </div>
             </div>
           </div>
 
