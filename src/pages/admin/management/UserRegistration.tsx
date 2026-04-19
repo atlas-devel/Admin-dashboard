@@ -4,7 +4,6 @@ import {
   registrationRoles,
 } from "../../../data/registrationFormData";
 import { useForm } from "react-hook-form";
-import { option } from "framer-motion/m";
 
 interface FormData {
   profile_image: FileList;
@@ -31,7 +30,9 @@ function UserRegistration() {
     formState: { errors },
   } = useForm<FormData>();
 
-  const submitFormData = (data) => {};
+  const submitFormData = (data: FormData) => {
+    console.log(data);
+  };
 
   return (
     <div className="w-full p-4 md:p-6 lg:py-2 lg:p-8 bg-background dark:bg-gray-800/30 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm shadow-secondary-color/10">
@@ -213,7 +214,7 @@ function UserRegistration() {
 
           {/* assigned roles */}
           <div>
-            <h1 className="pb-2 max-md:mb-4 max-md:mt-2 md:mt-12 border-b border-gray-100 dark:border-gray-700/20 text-gray-900  dark:text-gray-300 text-sm font-mono font-semibold tracking-wider">
+            <h1 className="pb-2 max-md:mb-4 max-md:mt-2 md:mt-12 border-b mb-6 border-gray-100 dark:border-gray-700/20 text-gray-900  dark:text-gray-300 text-sm font-mono font-semibold tracking-wider">
               ASSIGNED ROLES
             </h1>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 md:gap-6">
