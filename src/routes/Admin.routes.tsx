@@ -14,7 +14,7 @@ import AdminLogs from "../pages/admin/system/AdminLogs";
 import AdminSettings from "../pages/admin/system/AdminSettings";
 import AdminSupport from "../pages/admin/system/AdminSupport";
 import NotFound from "../pages/admin/NotFound";
-import AddUser from "../pages/admin/management/AddUser";
+import AddUser from "../pages/admin/management/UserRegistration";
 
 function AppRoutes() {
   return (
