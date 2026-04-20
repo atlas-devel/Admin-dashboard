@@ -15,7 +15,7 @@ function AdminUsers() {
           </h1>
           <button
             onClick={() => navigate("/admin/users/add")}
-            className="flex cursor-pointer items-center duration-300 bg-secondary-color dark:bg-secondary-color/60 dark:hover:bg-secondary-color/70 px-3 py-1 rounded-md text-white font-medium"
+            className="flex cursor-pointer items-center duration-300 bg-blue-600  dark:hover:bg-secondary-color/70 px-3 py-1 rounded-md text-white font-medium"
           >
             <Plus /> Add User
           </button>

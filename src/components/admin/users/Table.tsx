@@ -20,7 +20,7 @@ function Table({ start = 0, end = 10 }: { start: number; end: number }) {
         {users.slice(start, end).map((user) => (
           <tr
             key={user.id}
-            className="text-gray-500 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50 transition-colors duration-200 "
+            className="text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800/50 transition-colors duration-200 "
           >
             <td className="p-3">{user.name}</td>
             <td className="p-3">{user.role}</td>
@@ -43,13 +43,13 @@ function Table({ start = 0, end = 10 }: { start: number; end: number }) {
               )}
             </td>
             <td className="flex gap-3 items-center p-3">
-              <button className=" bg-gray-800/18 p-1 rounded-md border border-gray-500/30 text-gray-500">
+              <button className="  p-1 rounded-md hover:text-gray-600 cursor-pointer text-gray-500">
                 <Eye />
               </button>
-              <button className=" bg-blue-500/18 p-1 rounded-md border border-blue-500/30 text-blue-500/60">
+              <button className="  p-1 rounded-md hover:text-blue-600 cursor-pointer text-blue-500/60">
                 <Pencil />
               </button>
-              <button className=" bg-red-800/18 p-1 rounded-md border border-red-500/30 text-red-500/60">
+              <button className=" p-1 rounded-mdhover:text-red-600 cursor-pointer text-red-500/60">
                 <Trash className="" />
               </button>
             </td>

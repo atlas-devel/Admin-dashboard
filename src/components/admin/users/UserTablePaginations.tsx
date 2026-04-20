@@ -18,12 +18,16 @@ function UserTablePaginations({
           aria-label="Show users on Previous page"
           onClick={() => setCurrentPage((prev) => prev - 1)}
           disabled={currentPage === 1}
-          className={`border font-medium  border-gray-600 px-3 py-1 rounded-md ml-5   tracking-tight text-sm  ${currentPage === 1 ? "bg-gray-800 text-gray-600  cursor-not-allowed " : "hover:text-gray-100 hover:bg-gray-800/50  cursor-pointer text-gray-300"}`}
+          className={`border font-medium px-3 py-1 rounded-md ml-5 tracking-tight text-sm transition-colors ${
+            currentPage <= 1
+              ? "bg-gray-300 dark:bg-gray-800 text-gray-500 border-gray-500 dark:border-gray-600 cursor-not-allowed"
+              : "bg-blue-600 text-white border-transparent hover:bg-blue-700 cursor-pointer"
+          }`}
         >
           Previous
         </button>
         <div className="flex mx-6 gap-2">
-          <span className="w-7 h-7 font-semibold rounded-full bg-linear-to-l from-blue-500 to-blue-800 flex items-center justify-center ">
+          <span className="w-7 h-7 font-semibold  bg-blue-600 text-white border-white rounded-full bg-linear-to-l from-blue-500 to-blue-800 flex items-center justify-center ">
             {currentPage}
           </span>
         </div>
@@ -31,7 +35,11 @@ function UserTablePaginations({
           onClick={() => setCurrentPage((prev) => prev + 1)}
           disabled={currentPage === totalPages}
           aria-label="Show users on the Next page"
-          className={`border font-medium  border-gray-600 px-3 py-1 rounded-md  tracking-tight text-sm  ${currentPage === totalPages ? "bg-gray-800 text-gray-600  cursor-not-allowed " : "hover:text-gray-100 hover:bg-gray-800/50  cursor-pointer text-gray-300"}`}
+          className={`border font-medium px-3 py-1 rounded-md ml-5 tracking-tight text-sm transition-colors ${
+            currentPage >= totalPages
+              ? "bg-gray-300 dark:bg-gray-800 text-gray-500 border-gray-500 dark:border-gray-600 cursor-not-allowed"
+              : "bg-blue-600 text-white border-transparent hover:bg-blue-700 cursor-pointer"
+          }`}
         >
           Next
         </button>

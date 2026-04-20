@@ -27,9 +27,10 @@ function UsersFilter() {
 
   const ctx = useContext(UserManagementContext);
   if (!ctx) throw new Error("UserManagementContext is undefined");
-  const { setUsers } = ctx;
+  const { setUsers, setCurrentPage } = ctx;
 
   useEffect(() => {
+    setCurrentPage(1);
     setUsers(() => {
       if (currentRole === "All Roles" && currentStatus === "All Status") {
         return rwandaUsersData;
@@ -48,7 +49,7 @@ function UsersFilter() {
           user.status.toLowerCase() === currentStatus.toLowerCase(),
       );
     });
-  }, [currentRole, currentStatus, setUsers]);
+  }, [currentRole, currentStatus, setUsers, setCurrentPage]);
   useEffect(() => {}, [currentStatus]);
   return (
     <div className="flex items-center md:gap-8 max-sm:flex-col flex-row max-sm:gap-2">

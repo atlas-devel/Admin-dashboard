@@ -10,9 +10,14 @@ export const UserManagementProvider = ({
 }) => {
   const [users, setUsers] = useState<RealEstateUser[]>(rwandaUsersData);
 
+  // current page state for paginations
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
   const value = {
     users,
     setUsers,
+    currentPage,
+    setCurrentPage,
   };
   return (
     <UserManagementContext.Provider value={value}>
