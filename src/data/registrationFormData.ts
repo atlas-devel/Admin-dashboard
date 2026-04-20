@@ -46,6 +46,7 @@ export const registrationRoles: {
 ];
 
 export const districts: { id: number; district: string }[] = [
+  { id: 0, district: "Select district" },
   { id: 1, district: "BUGESERA" },
   { id: 2, district: "BURERA" },
   { id: 3, district: "GAKENKE" },
